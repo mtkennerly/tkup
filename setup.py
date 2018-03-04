@@ -5,7 +5,7 @@ with open("README.md") as file:
 
 setup(
     name="tkup",
-    version="1.0.0",
+    version="1.1.0",
     description="Hierarchical Tkinter wrapper",
     long_description=long_description,
     url="https://github.com/mtkennerly/tkup",
