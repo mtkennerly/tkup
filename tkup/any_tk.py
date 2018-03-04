@@ -18,6 +18,7 @@ AnyTK = Union[
     ttk.LabelFrame,
     ttk.LabeledScale,
     tk.Listbox,
+    tk.Menu,
     ttk.Menubutton,
     tk.Message,
     ttk.Notebook,

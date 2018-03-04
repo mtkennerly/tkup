@@ -198,6 +198,19 @@ class GUI:
             yield w
 
     @contextmanager
+    def menu(self, *args, **kwargs) -> Iterator[tk.Menu]:
+        """
+        Make a menu.
+
+        :param args: Passed to constructor.
+        :param kwargs: Passed to constructor.
+        :return: Widget.
+        """
+
+        with self.widget(tk.Menu, *args, **kwargs) as w:
+            yield w
+
+    @contextmanager
     def menubutton(self, *args, **kwargs) -> Iterator[ttk.Menubutton]:
         """
         Make a menubutton.

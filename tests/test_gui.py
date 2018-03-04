@@ -93,6 +93,11 @@ class TestGUI:
             with app.listbox() as w:
                 assert isinstance(w, tk.Listbox)
 
+    def test_menu(self, app: GUI):
+        with app.root():
+            with app.menu() as w:
+                assert isinstance(w, tk.Menu)
+
     def test_menubutton(self, app: GUI):
         with app.root():
             with app.menubutton() as w:
