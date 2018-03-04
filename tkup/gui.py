@@ -4,8 +4,10 @@ __all__ = [
 
 from contextlib import contextmanager
 from tkinter import ttk
-from typing import Callable, Iterator, Tuple, Type, TypeVar, Union
+from typing import Callable, Iterator, Tuple, Type, TypeVar
 import tkinter as tk
+
+from tkup import AnyTK
 
 T = TypeVar("T", bound=tk.Widget)
 
@@ -20,7 +22,7 @@ class GUI:
         self._root = tk.Tk(*args, **kwargs)
         self._chain = []
 
-    def it(self) -> Union[tk.Tk, tk.Widget]:
+    def it(self) -> AnyTK:
         """
         Get the master widget for the current nesting level.
 
@@ -32,7 +34,7 @@ class GUI:
 
         return self._chain[-1]
 
-    def with_it(self) -> Tuple["GUI", Callable[[], tk.Widget]]:
+    def with_it(self) -> Tuple["GUI", Callable[[], AnyTK]]:
         """
         Get the class instance and its it() for quickly assigning to variables.
 
