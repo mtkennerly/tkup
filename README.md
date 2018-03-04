@@ -71,7 +71,7 @@ tkup prefers themed (ttk) widgets wherever available. If you want to use
 classic widgets, or if you want to use a custom subclass of `tkinter.Widget`,
 then you can use the GUI `widget` method and pass in the type to instantiate:
 
-```
+```python
 import tkinter as tk
 from tkup import GUI
 
