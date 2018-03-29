@@ -3,11 +3,11 @@ __all__ = [
 ]
 
 from contextlib import contextmanager
-from tkinter import ttk
 from typing import Callable, Iterator, Tuple, Type, TypeVar
 import tkinter as tk
 
 from tkup import AnyTK
+import tkup._widgets as tw
 
 T = TypeVar("T", bound=tk.Widget)
 
@@ -68,7 +68,7 @@ class GUI:
         self._chain.pop()
 
     @contextmanager
-    def button(self, *args, **kwargs) -> Iterator[ttk.Button]:
+    def button(self, *args, **kwargs) -> Iterator[tw.Button]:
         """
         Make a button.
 
@@ -77,11 +77,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Button, *args, **kwargs) as w:
+        with self.widget(tw.Button, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def canvas(self, *args, **kwargs) -> Iterator[tk.Canvas]:
+    def canvas(self, *args, **kwargs) -> Iterator[tw.Canvas]:
         """
         Make a canvas.
 
@@ -90,11 +90,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(tk.Canvas, *args, **kwargs) as w:
+        with self.widget(tw.Canvas, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def checkbutton(self, *args, **kwargs) -> Iterator[ttk.Checkbutton]:
+    def checkbutton(self, *args, **kwargs) -> Iterator[tw.Checkbutton]:
         """
         Make a checkbutton.
 
@@ -103,11 +103,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Checkbutton, *args, **kwargs) as w:
+        with self.widget(tw.Checkbutton, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def combobox(self, *args, **kwargs) -> Iterator[ttk.Combobox]:
+    def combobox(self, *args, **kwargs) -> Iterator[tw.Combobox]:
         """
         Make a combobox.
 
@@ -116,11 +116,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Combobox, *args, **kwargs) as w:
+        with self.widget(tw.Combobox, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def entry(self, *args, **kwargs) -> Iterator[ttk.Entry]:
+    def entry(self, *args, **kwargs) -> Iterator[tw.Entry]:
         """
         Make an entry.
 
@@ -129,11 +129,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Entry, *args, **kwargs) as w:
+        with self.widget(tw.Entry, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def frame(self, *args, **kwargs) -> Iterator[ttk.Frame]:
+    def frame(self, *args, **kwargs) -> Iterator[tw.Frame]:
         """
         Make a frame.
 
@@ -142,11 +142,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Frame, *args, **kwargs) as w:
+        with self.widget(tw.Frame, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def label(self, *args, **kwargs) -> Iterator[ttk.Label]:
+    def label(self, *args, **kwargs) -> Iterator[tw.Label]:
         """
         Make a label.
 
@@ -155,11 +155,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Label, *args, **kwargs) as w:
+        with self.widget(tw.Label, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def label_frame(self, *args, **kwargs) -> Iterator[ttk.LabelFrame]:
+    def label_frame(self, *args, **kwargs) -> Iterator[tw.LabelFrame]:
         """
         Make a label frame.
 
@@ -168,11 +168,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.LabelFrame, *args, **kwargs) as w:
+        with self.widget(tw.LabelFrame, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def labeled_scale(self, *args, **kwargs) -> Iterator[ttk.LabeledScale]:
+    def labeled_scale(self, *args, **kwargs) -> Iterator[tw.LabeledScale]:
         """
         Make a labeled scale.
 
@@ -181,11 +181,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.LabeledScale, *args, **kwargs) as w:
+        with self.widget(tw.LabeledScale, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def listbox(self, *args, **kwargs) -> Iterator[tk.Listbox]:
+    def listbox(self, *args, **kwargs) -> Iterator[tw.Listbox]:
         """
         Make a listbox.
 
@@ -194,11 +194,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(tk.Listbox, *args, **kwargs) as w:
+        with self.widget(tw.Listbox, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def menu(self, *args, **kwargs) -> Iterator[tk.Menu]:
+    def menu(self, *args, **kwargs) -> Iterator[tw.Menu]:
         """
         Make a menu.
 
@@ -207,11 +207,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(tk.Menu, *args, **kwargs) as w:
+        with self.widget(tw.Menu, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def menubutton(self, *args, **kwargs) -> Iterator[ttk.Menubutton]:
+    def menubutton(self, *args, **kwargs) -> Iterator[tw.Menubutton]:
         """
         Make a menubutton.
 
@@ -220,11 +220,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Menubutton, *args, **kwargs) as w:
+        with self.widget(tw.Menubutton, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def message(self, *args, **kwargs) -> Iterator[tk.Message]:
+    def message(self, *args, **kwargs) -> Iterator[tw.Message]:
         """
         Make a message.
 
@@ -233,11 +233,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(tk.Message, *args, **kwargs) as w:
+        with self.widget(tw.Message, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def notebook(self, *args, **kwargs) -> Iterator[ttk.Notebook]:
+    def notebook(self, *args, **kwargs) -> Iterator[tw.Notebook]:
         """
         Make a notebook.
 
@@ -246,11 +246,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Notebook, *args, **kwargs) as w:
+        with self.widget(tw.Notebook, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def option_menu(self, *args, **kwargs) -> Iterator[ttk.OptionMenu]:
+    def option_menu(self, *args, **kwargs) -> Iterator[tw.OptionMenu]:
         """
         Make an option menu.
 
@@ -259,11 +259,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.OptionMenu, *args, **kwargs) as w:
+        with self.widget(tw.OptionMenu, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def paned_window(self, *args, **kwargs) -> Iterator[ttk.PanedWindow]:
+    def paned_window(self, *args, **kwargs) -> Iterator[tw.PanedWindow]:
         """
         Make a paned window.
 
@@ -272,11 +272,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.PanedWindow, *args, **kwargs) as w:
+        with self.widget(tw.PanedWindow, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def progressbar(self, *args, **kwargs) -> Iterator[ttk.Progressbar]:
+    def progressbar(self, *args, **kwargs) -> Iterator[tw.Progressbar]:
         """
         Make a progressbar.
 
@@ -285,11 +285,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Progressbar, *args, **kwargs) as w:
+        with self.widget(tw.Progressbar, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def radiobutton(self, *args, **kwargs) -> Iterator[ttk.Radiobutton]:
+    def radiobutton(self, *args, **kwargs) -> Iterator[tw.Radiobutton]:
         """
         Make a radiobutton.
 
@@ -298,7 +298,7 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Radiobutton, *args, **kwargs) as w:
+        with self.widget(tw.Radiobutton, *args, **kwargs) as w:
             yield w
 
     @contextmanager
@@ -314,7 +314,7 @@ class GUI:
         self._chain.pop()
 
     @contextmanager
-    def scale(self, *args, **kwargs) -> Iterator[ttk.Scale]:
+    def scale(self, *args, **kwargs) -> Iterator[tw.Scale]:
         """
         Make a scale.
 
@@ -323,11 +323,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Scale, *args, **kwargs) as w:
+        with self.widget(tw.Scale, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def scrollbar(self, *args, **kwargs) -> Iterator[ttk.Scrollbar]:
+    def scrollbar(self, *args, **kwargs) -> Iterator[tw.Scrollbar]:
         """
         Make a scrollbar.
 
@@ -336,11 +336,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Scrollbar, *args, **kwargs) as w:
+        with self.widget(tw.Scrollbar, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def separator(self, *args, **kwargs) -> Iterator[ttk.Separator]:
+    def separator(self, *args, **kwargs) -> Iterator[tw.Separator]:
         """
         Make a separator.
 
@@ -349,11 +349,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Separator, *args, **kwargs) as w:
+        with self.widget(tw.Separator, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def sizegrip(self, *args, **kwargs) -> Iterator[ttk.Sizegrip]:
+    def sizegrip(self, *args, **kwargs) -> Iterator[tw.Sizegrip]:
         """
         Make a sizegrip.
 
@@ -362,11 +362,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Sizegrip, *args, **kwargs) as w:
+        with self.widget(tw.Sizegrip, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def spinbox(self, *args, **kwargs) -> Iterator[tk.Spinbox]:
+    def spinbox(self, *args, **kwargs) -> Iterator[tw.Spinbox]:
         """
         Make a spinbox.
 
@@ -375,11 +375,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(tk.Spinbox, *args, **kwargs) as w:
+        with self.widget(tw.Spinbox, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def text(self, *args, **kwargs) -> Iterator[tk.Text]:
+    def text(self, *args, **kwargs) -> Iterator[tw.Text]:
         """
         Make a text.
 
@@ -388,11 +388,11 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(tk.Text, *args, **kwargs) as w:
+        with self.widget(tw.Text, *args, **kwargs) as w:
             yield w
 
     @contextmanager
-    def treeview(self, *args, **kwargs) -> Iterator[ttk.Treeview]:
+    def treeview(self, *args, **kwargs) -> Iterator[tw.Treeview]:
         """
         Make a treeview.
 
@@ -401,5 +401,5 @@ class GUI:
         :return: Widget.
         """
 
-        with self.widget(ttk.Treeview, *args, **kwargs) as w:
+        with self.widget(tw.Treeview, *args, **kwargs) as w:
             yield w

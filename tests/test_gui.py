@@ -1,10 +1,10 @@
 import tkinter as tk
-from tkinter import ttk
 from unittest import mock
 
 import pytest
 
 from tkup import GUI
+import tkup._widgets as tw
 
 
 @pytest.fixture
@@ -46,92 +46,92 @@ class TestGUI:
     def test_button(self, app: GUI):
         with app.root():
             with app.button() as w:
-                assert isinstance(w, ttk.Button)
+                assert isinstance(w, tw.Button)
 
     def test_canvas(self, app: GUI):
         with app.root():
             with app.canvas() as w:
-                assert isinstance(w, tk.Canvas)
+                assert isinstance(w, tw.Canvas)
 
     def test_checkbutton(self, app: GUI):
         with app.root():
             with app.checkbutton() as w:
-                assert isinstance(w, ttk.Checkbutton)
+                assert isinstance(w, tw.Checkbutton)
 
     def test_combobox(self, app: GUI):
         with app.root():
             with app.combobox() as w:
-                assert isinstance(w, ttk.Combobox)
+                assert isinstance(w, tw.Combobox)
 
     def test_entry(self, app: GUI):
         with app.root():
             with app.entry() as w:
-                assert isinstance(w, ttk.Entry)
+                assert isinstance(w, tw.Entry)
 
     def test_frame(self, app: GUI):
         with app.root():
             with app.frame() as w:
-                assert isinstance(w, ttk.Frame)
+                assert isinstance(w, tw.Frame)
 
     def test_label(self, app: GUI):
         with app.root():
             with app.label() as w:
-                assert isinstance(w, ttk.Label)
+                assert isinstance(w, tw.Label)
 
     def test_label_frame(self, app: GUI):
         with app.root():
             with app.label_frame() as w:
-                assert isinstance(w, ttk.LabelFrame)
+                assert isinstance(w, tw.LabelFrame)
 
     def test_labeled_scale(self, app: GUI):
         with app.root():
             with app.labeled_scale() as w:
-                assert isinstance(w, ttk.LabeledScale)
+                assert isinstance(w, tw.LabeledScale)
 
     def test_listbox(self, app: GUI):
         with app.root():
             with app.listbox() as w:
-                assert isinstance(w, tk.Listbox)
+                assert isinstance(w, tw.Listbox)
 
     def test_menu(self, app: GUI):
         with app.root():
             with app.menu() as w:
-                assert isinstance(w, tk.Menu)
+                assert isinstance(w, tw.Menu)
 
     def test_menubutton(self, app: GUI):
         with app.root():
             with app.menubutton() as w:
-                assert isinstance(w, ttk.Menubutton)
+                assert isinstance(w, tw.Menubutton)
 
     def test_message(self, app: GUI):
         with app.root():
             with app.message() as w:
-                assert isinstance(w, tk.Message)
+                assert isinstance(w, tw.Message)
 
     def test_notebook(self, app: GUI):
         with app.root():
             with app.notebook() as w:
-                assert isinstance(w, ttk.Notebook)
+                assert isinstance(w, tw.Notebook)
 
     def test_option_menu(self, app: GUI):
         with app.root():
             with app.option_menu(tk.StringVar()) as w:
-                assert isinstance(w, ttk.OptionMenu)
+                assert isinstance(w, tw.OptionMenu)
 
     def test_paned_window(self, app: GUI):
         with app.root():
             with app.paned_window() as w:
-                assert isinstance(w, ttk.PanedWindow)
+                assert isinstance(w, tw.PanedWindow)
 
     def test_progressbar(self, app: GUI):
         with app.root():
             with app.progressbar() as w:
-                assert isinstance(w, ttk.Progressbar)
+                assert isinstance(w, tw.Progressbar)
 
     def test_radiobutton(self, app: GUI):
         with app.root():
             with app.radiobutton() as w:
-                assert isinstance(w, ttk.Radiobutton)
+                assert isinstance(w, tw.Radiobutton)
 
     def test_root(self, app: GUI):
         with app.root():
@@ -141,34 +141,34 @@ class TestGUI:
     def test_scale(self, app: GUI):
         with app.root():
             with app.scale() as w:
-                assert isinstance(w, ttk.Scale)
+                assert isinstance(w, tw.Scale)
 
     def test_scrollbar(self, app: GUI):
         with app.root():
             with app.scrollbar() as w:
-                assert isinstance(w, ttk.Scrollbar)
+                assert isinstance(w, tw.Scrollbar)
 
     def test_separator(self, app: GUI):
         with app.root():
             with app.separator() as w:
-                assert isinstance(w, ttk.Separator)
+                assert isinstance(w, tw.Separator)
 
     def test_sizegrip(self, app: GUI):
         with app.root():
             with app.sizegrip() as w:
-                assert isinstance(w, ttk.Sizegrip)
+                assert isinstance(w, tw.Sizegrip)
 
     def test_spinbox(self, app: GUI):
         with app.root():
             with app.spinbox() as w:
-                assert isinstance(w, tk.Spinbox)
+                assert isinstance(w, tw.Spinbox)
 
     def test_text(self, app: GUI):
         with app.root():
             with app.text() as w:
-                assert isinstance(w, tk.Text)
+                assert isinstance(w, tw.Text)
 
     def test_treeview(self, app: GUI):
         with app.root():
             with app.treeview() as w:
-                assert isinstance(w, ttk.Treeview)
+                assert isinstance(w, tw.Treeview)

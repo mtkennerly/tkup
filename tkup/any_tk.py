@@ -2,37 +2,38 @@ __all__ = [
     "AnyTK"
 ]
 
-from tkinter import ttk
 from typing import Union
 import tkinter as tk
 
+import tkup._widgets as tw
+
 #: Union of Tkinter root and all wrapped widgets for type checking.
 AnyTK = Union[
-    ttk.Button,
-    tk.Canvas,
-    ttk.Checkbutton,
-    ttk.Combobox,
-    ttk.Entry,
-    ttk.Frame,
-    ttk.Label,
-    ttk.LabelFrame,
-    ttk.LabeledScale,
-    tk.Listbox,
-    tk.Menu,
-    ttk.Menubutton,
-    tk.Message,
-    ttk.Notebook,
-    ttk.OptionMenu,
-    ttk.PanedWindow,
-    ttk.Progressbar,
-    ttk.Radiobutton,
-    ttk.Scale,
-    ttk.Scrollbar,
-    ttk.Separator,
-    ttk.Sizegrip,
-    tk.Spinbox,
-    tk.Text,
+    tw.Button,
+    tw.Canvas,
+    tw.Checkbutton,
+    tw.Combobox,
+    tw.Entry,
+    tw.Frame,
+    tw.Label,
+    tw.LabelFrame,
+    tw.LabeledScale,
+    tw.Listbox,
+    tw.Menu,
+    tw.Menubutton,
+    tw.Message,
+    tw.Notebook,
+    tw.OptionMenu,
+    tw.PanedWindow,
+    tw.Progressbar,
+    tw.Radiobutton,
+    tw.Scale,
+    tw.Scrollbar,
+    tw.Separator,
+    tw.Sizegrip,
+    tw.Spinbox,
+    tw.Text,
     tk.Tk,
-    ttk.Treeview,
+    tw.Treeview,
     tk.Widget
 ]
