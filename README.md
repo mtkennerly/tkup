@@ -15,7 +15,7 @@ import tkinter as tk
 from tkinter import ttk
 
 app = tk.Tk()
-app.title = "Demo"
+app.title("Demo")
 
 outer_frame = ttk.Frame(app)
 outer_frame.grid()
@@ -37,7 +37,7 @@ from tkup import GUI
 app = GUI()
 
 with app.root() as root:
-    root.title = "Demo"
+    root.title("Demo")
     with app.frame() as outer_frame:
         outer_frame.grid()
         with app.button(text="hi") as hi_button:
@@ -58,7 +58,7 @@ from tkup import GUI
 app, it = GUI().with_it()
 
 with app.root():
-    it().title = "Demo"
+    it().title("Demo")
     with app.frame():
         it().grid()
         with app.button(text="hi"):
