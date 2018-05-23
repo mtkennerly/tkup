@@ -3,9 +3,9 @@ from invoke import task
 
 @task
 def dist(context):
-    context.run("python setup.py bdist_wheel")
+    context.run("poetry build")
 
 
 @task
 def test(context):
-    context.run("tox")
+    context.run("poetry run tox")

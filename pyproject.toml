@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "tkup"
+version = "1.2.0"
+description = "Hierarchical Tkinter wrapper"
+license = "MIT"
+authors = ["Matthew T. Kennerly <mtkennerly@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/mtkennerly/tkup"
+keywords = ["gui", "wrapper", "tkinter"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: User Interfaces"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.5"
+
+[tool.poetry.dev-dependencies]
+invoke = "*"
+pytest = "*"
+pytest-cov = "*"
+tox = "*"
