@@ -21,7 +21,6 @@ classifiers = [
 python = ">=3.5"
 
 [tool.poetry.dev-dependencies]
-invoke = "*"
-pytest = "*"
-pytest-cov = "*"
-tox = "*"
+pytest = "^3.5"
+pytest-cov = "^2.5"
+tox = "^3.0"
