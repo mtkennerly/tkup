@@ -1,7 +1,7 @@
 
 # tkup
-[![Build status](https://travis-ci.org/mtkennerly/tkup.svg?branch=master)](https://travis-ci.org/mtkennerly/dunamai)
-[![Version](https://img.shields.io/pypi/v/tkup)](https://pypi.org/project/dunamai)
+[![Build status](https://travis-ci.org/mtkennerly/tkup.svg?branch=master)](https://travis-ci.org/mtkennerly/tkup)
+[![Version](https://img.shields.io/pypi/v/tkup)](https://pypi.org/project/tkup)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 tkup is a thin wrapper around standard Tkinter widgets, allowing you to write
