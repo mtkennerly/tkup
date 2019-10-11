@@ -1,0 +1,20 @@
+language: python
+
+matrix:
+  fast_finish: true
+  include:
+    - python: '3.5'
+      script:
+        - xvfb-run -a poetry run pytest --verbose --cov
+    - python: '3.6'
+      script:
+        - xvfb-run -a poetry run pytest --verbose --cov
+    - python: '3.7'
+      script:
+        - xvfb-run -a poetry run pytest --verbose --cov
+        - poetry run pre-commit run --all-files --show-diff-on-failure
+
+install:
+  - sudo apt-get install -y xvfb
+  - pip install poetry
+  - poetry install

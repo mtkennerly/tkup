@@ -1,6 +1,4 @@
-__all__ = [
-    "AnyTK"
-]
+__all__ = ["AnyTK"]
 
 from typing import Union
 import tkinter as tk
@@ -35,5 +33,5 @@ AnyTK = Union[
     tw.Text,
     tk.Tk,
     tw.Treeview,
-    tk.Widget
+    tk.Widget,
 ]

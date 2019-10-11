@@ -1,5 +1,8 @@
 
 # tkup
+[![Build status](https://travis-ci.org/mtkennerly/tkup.svg?branch=master)](https://travis-ci.org/mtkennerly/dunamai)
+[![Version](https://img.shields.io/pypi/v/tkup)](https://pypi.org/project/dunamai)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 tkup is a thin wrapper around standard Tkinter widgets, allowing you to write
 code that visually reflects the widget hierarchy. It doesn't try to reinvent
@@ -83,9 +86,11 @@ with app.root():
 ```
 
 ## Installation
-
 ```
 pip install tkup
 ```
 
 tkup supports Python 3.5 and higher.
+
+## Development
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -1,9 +1,7 @@
-__all__ = [
-    "GUI"
-]
+__all__ = ["GUI"]
 
 from contextlib import contextmanager
-from typing import Callable, Iterator, Tuple, Type, TypeVar
+from typing import Callable, Iterator, MutableSequence, Tuple, Type, TypeVar
 import tkinter as tk
 
 from tkup import AnyTK
@@ -20,7 +18,7 @@ class GUI:
         """
 
         self._root = tk.Tk(*args, **kwargs)
-        self._chain = []
+        self._chain = []  # type: MutableSequence[AnyTK]
 
     def it(self) -> AnyTK:
         """

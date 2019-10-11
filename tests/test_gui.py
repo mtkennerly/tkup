@@ -34,9 +34,10 @@ class TestGUI:
                 assert it() is button
 
     def test_run(self, app: GUI):
-        app._root = mock.MagicMock()
+        mocked_root = mock.MagicMock()
+        app._root = mocked_root
         app.run()
-        app._root.mainloop.assert_called_once_with()
+        mocked_root.mainloop.assert_called_once_with()
 
     def test_widget(self, app: GUI):
         with app.root():
