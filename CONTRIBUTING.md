@@ -14,5 +14,5 @@ Development requires Python 3.6+ because of [Black](https://github.com/ambv/blac
   ```
 * Run unit tests:
   ```
-  poetry run pytest --cov
+  poetry run pytest
   ```
