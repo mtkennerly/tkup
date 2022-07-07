@@ -1,0 +1,41 @@
+on:
+  - push
+  - pull_request
+
+name: Main
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+      - run: |
+          pip install poetry
+          poetry install
+          poetry run pre-commit run --all-files --show-diff-on-failure
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - '3.5'
+          - '3.6'
+          - '3.7'
+          - '3.8'
+          - '3.9'
+    name: test (python = ${{ matrix.python-version }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: |
+          sudo apt-get install -y xvfb
+          pip install poetry
+          poetry install
+          xvfb-run -a poetry run pytest --verbose

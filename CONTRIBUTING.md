@@ -5,7 +5,7 @@ Development requires Python 3.6+ because of [Black](https://github.com/ambv/blac
 * If you want to take advantage of the default VSCode integration, then first
   configure Poetry to make its virtual environment in the repository:
   ```
-  poetry config settings.virtualenvs.in-project true
+  poetry config virtualenvs.in-project true
   ```
 * After cloning the repository, activate the tooling:
   ```
@@ -15,5 +15,4 @@ Development requires Python 3.6+ because of [Black](https://github.com/ambv/blac
 * Run unit tests:
   ```
   poetry run pytest --cov
-  poetry run tox
   ```
