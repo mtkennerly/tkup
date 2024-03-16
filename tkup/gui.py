@@ -1,7 +1,8 @@
 __all__ = ["GUI"]
 
 from contextlib import contextmanager
-from typing import Callable, Iterator, MutableSequence, Tuple, Type, TypeVar
+from typing import Callable, Iterator, Tuple, Type, TypeVar
+from typing import MutableSequence  # noqa: F401
 import tkinter as tk
 
 from tkup import AnyTK

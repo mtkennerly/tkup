@@ -22,8 +22,8 @@ class TestGUI:
             with app.button() as button:
                 assert app.it() is button
 
-    def test_with_it(self):
-        app, it = GUI().with_it()
+    def test_with_it(self, app: GUI):
+        app, it = app.with_it()
 
         with pytest.raises(ValueError):
             it()

@@ -1,11 +1,12 @@
 {
   "recommendations": [
-    "bungcip.better-toml",
     "codezombiech.gitignore",
     "EditorConfig.EditorConfig",
+    "ms-python.mypy-type-checker",
     "ms-python.python",
     "redhat.vscode-yaml",
     "sidneys1.gitconfig",
     "streetsidesoftware.code-spell-checker",
+    "tamasfe.even-better-toml",
   ]
 }

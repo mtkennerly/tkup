@@ -1,6 +1,6 @@
 ## Development
-This project is managed using [Poetry](https://poetry.eustace.io).
-Development requires Python 3.6+ because of [Black](https://github.com/ambv/black).
+This project is managed using [Poetry](https://python-poetry.org/).
+Development requires Python 3.9+.
 
 * If you want to take advantage of the default VSCode integration, then first
   configure Poetry to make its virtual environment in the repository:
